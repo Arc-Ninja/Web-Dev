@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myModule">
+ <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min
+.js"></script>
+ <script src="book.js"></script>
+ <link rel="stylesheet" href="book.css">
+ <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/twitterbootstrap/2.0.4/css/bootstrap-combined.min.css">
+ </head>
+ <body background="16.jpg"><center><h1>The Book Details</h1>
+ <div ng-controller="myController">
+ <table>
+ <thead>
+ <tr>
+ <th>Title of Book</th>
+ <th>Author Name</th>
+ <th> Publisher Name</th>
+ <th> Price of the Book</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr ng-repeat="book in books">
+ <td>{{book.title | uppercase}}</td>
+ <td>{{book.author}}</td>
+ <td>{{book.publisher}}</td>
+ <td>{{book.price}}</td>
+ </tr> 
+ </tbody>
+ </center>
+ </body>
+</html>
